@@ -1,0 +1,93 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<!-- Header -->
+<style>
+    .card {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    .container {
+        width: 100%;
+    }
+</style>
+<div class="header pb-6">
+    <div style="height: 100%;" class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item"><a style="color: black;" href="#">Rewards</a></li>
+                            <li class="breadcrumb-item"><a href="#"><i style="color: black;"
+                                        class="ni ni-ungroup"></i></a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <!-- Card stats -->
+        </div>
+    </div>
+</div>
+
+<!-- Page content -->
+<div class="container-fluid mt--6">
+    <div class="row">
+        <!--  -->
+        <div class="col-xl-12">
+            <div class="card">
+                <div style="background-color: white;" class="card-header bg-transparent">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <!-- <h6 class="text-light text-uppercase ls-1 mb-1">My Courses</h6> -->
+                            <h3 style="font-size: 20px;" class="h3 text-black mb-0">You gain 2 honor points!</h3>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Earn extra honor and climb the leaderboards!</h5>
+                            <p class="card-text">
+                                Honor is earned for each progress made..
+                            </p>
+                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+                            <div class="fb-share-button" data-href="http://127.0.0.1:8000/" data-layout="button_count">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="background-color:white" class="card-body">
+                    <!-- Course -->
+
+                </div>
+            </div>
+            {% include 'includes/footer.html' %}
+            <!--  -->
+
+        </div>
+
+        {% endblock content %}
+
+        <!-- Specific Page JS goes HERE  -->
+        {% block javascripts %}
+
+        <script src="/static/assets/vendor/chart.js/dist/Chart.min.js"></script>
+        <script src="/static/assets/vendor/chart.js/dist/Chart.extension.js"></script>
+        <script>(function (d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+        {% endblock javascripts %}

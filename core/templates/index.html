@@ -1,0 +1,242 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<style>
+  .list-group-item {
+    font-size: 12px;
+  }
+
+  .feed {
+    float: right;
+    font-size: 12px;
+  }
+
+  #stat {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<!-- Header -->
+<div class="header pb-6">
+  <div class="container-fluid">
+    <div class="header-body">
+      <div class="row align-items-center py-4">
+        <div class="col-lg-6 col-7">
+          <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+              <li class="breadcrumb-item"><a style="color: black;" href="#">Dashboards</a></li>
+              <li class="breadcrumb-item"><a style="color: black;" href="#"><i class="fas fa-home"></i></a></li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- Card stats -->
+      <div class="row">
+        <div class="col-xl-3 col-md-6">
+          <div class="card card-stats">
+            <!-- Card body -->
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Profile Badge</h5>
+                  <span class="h2 font-weight-bold mb-0">Bronze II</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                    <i class="ni ni-active-40"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="card card-stats">
+            <!-- Card body -->
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Honor Points</h5>
+                  <span class="h2 font-weight-bold mb-0">10</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
+                    <i class="ni ni-chart-pie-35"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="card card-stats">
+            <!-- Card body -->
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Course Completed</h5>
+                  <span class="h2 font-weight-bold mb-0">10 / 23</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
+                    <i class="ni ni-money-coins"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="card card-stats">
+            <!-- Card body -->
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  <h5 class="card-title text-uppercase text-muted mb-0">Rank</h5>
+                  <span class="h2 font-weight-bold mb-0">1293th</span>
+                </div>
+                <div class="col-auto">
+                  <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
+                    <i class="ni ni-chart-bar-32"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="container-fluid mt--6">
+  <div class="row">
+    <div class="col-xl-8">
+      <div class="card">
+        <div style="background-color: white;" class="card-header bg-transparent">
+          <div class="row align-items-center">
+            <div class="col">
+              <!-- <h6 class="text-light text-uppercase ls-1 mb-1">My Courses</h6> -->
+              <h5 class="h3 text-black mb-0">Recent Activity</h5>
+            </div>
+          </div>
+        </div>
+        <div style="background-color:white" class="card-body">
+          <!-- Course -->
+          <div class="course">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Root got highest mark in Linear Algebra Practice II<p class="feed">3 June 2020
+                </p>
+              </li>
+              <li class="list-group-item">Root finished more than 5 task in one day<p class="feed">1 June 2020</p>
+              </li>
+              <li class="list-group-item">New courses added to your subscription<p class="feed">24 May 2020</p>
+              </li>
+              <li class="list-group-item">Root has finished Statistics Level IV<p class="feed">6 May 2020</p>
+              </li>
+              <li class="list-group-item">You just finished English Level I<p class="feed">2 May 2020</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-4">
+      <div class="card">
+        <div class="card-header bg-transparent">
+          <div class="row align-items-center">
+            <div class="col">
+              <!-- <h6 class="text-uppercase text-muted ls-1 mb-1">Your Statistic</h6> -->
+              <h5 class="h3 mb-0">Attributes</h5>
+              <canvas id="myChart" width="400" height="460"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include 'includes/footer.html' %}
+
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+<script src="/static/assets/vendor/chart.js/dist/Chart.min.js"></script>
+<script src="/static/assets/vendor/chart.js/dist/Chart.extension.js"></script>
+<script>
+  var data = {
+    labels: ["Logic", "Creativity", "Maths", "Designing", "Computer", "Arts", "Linguistic"],
+    datasets: [
+      {
+        label: "My Second dataset",
+        backgroundColor: "rgba(255,99,132,0.2)",
+        borderColor: "rgba(255,99,132,1)",
+        pointBackgroundColor: "rgba(255,99,132,1)",
+        pointBorderColor: "#fff",
+        pointHoverBackgroundColor: "#fff",
+        pointHoverBorderColor: "rgba(255,99,132,1)",
+        data: [28, 48, 40, 19, 96, 27, 100]
+      }
+    ]
+  };
+  var ctx = document.getElementById("myChart");
+  var options = {
+    legend: {
+      display: false
+    },
+    tooltips: {
+      mode: 'label'
+    },
+    scales: {
+      display: false
+    }
+  };
+  var myRadarChart = new Chart(ctx, {
+    type: 'radar',
+    data: data,
+    options: options
+  });
+  Chart.helpers.bindEvents(myRadarChart, ['mousedown'], function (evt) {
+    var lastMousePosition = [evt.x, evt.y];
+    console.log('mousedown');
+    var lastActive = myRadarChart.lastActive;
+    if (Array.isArray(lastActive) && lastActive.length) {
+      lastActive = lastActive[0];
+      console.log(lastActive);
+      var moveHandler = function (evt) {
+        var index = lastActive._index;
+        var dataset = lastActive._datasetIndex;
+        console.log('mouse move');
+        if (evt.y < lastMousePosition[1]) {
+          myRadarChart.data.datasets[dataset].data[index] = myRadarChart.data.datasets[dataset].data[index] + 1;
+          myRadarChart.update(1, false);
+        } else if (evt.y > lastMousePosition[1]) {
+          myRadarChart.data.datasets[dataset].data[index] = myRadarChart.data.datasets[dataset].data[index] - 1;
+          myRadarChart.update(1, false);
+        }
+        lastMousePosition = [evt.x, evt.y];
+      };
+      var outHandler = function () {
+        console.log('unbinding');
+        Chart.helpers.unbindEvents(myRadarChart, { 'mousemove': moveHandler });
+        Chart.helpers.unbindEvents(myRadarChart, { 'mouseup': outHandler });
+        Chart.helpers.unbindEvents(myRadarChart, { 'mouseout': outHandler });
+      }
+      Chart.helpers.bindEvents(myRadarChart, ['mousemove'], moveHandler);
+      Chart.helpers.bindEvents(myRadarChart, ['mouseup'], outHandler);
+      Chart.helpers.bindEvents(myRadarChart, ['mouseout'], outHandler);
+    }
+  });
+</script>
+{% endblock javascripts %}

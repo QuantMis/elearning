@@ -1,0 +1,25 @@
+# Query: http://127.0.0.1:8000
+
+14 results - 4 files
+
+templates/question.html:
+  214:                                             <th><a href="https://isn-elearning-prototype/result/" class="btn-primary btn-sm">Submit</a></th>
+  215:                                             <th><a href="https://isn-elearning-prototype/training/" class="btn-primary btn-sm">Save for later</a></th>
+
+templates/result.html:
+  63:                             <div class="fb-share-button" data-href="https://isn-elearning-prototype/" data-layout="button_count">
+
+templates/training.html:
+   63:                             </b><a href="https://isn-elearning-prototype/question/" class="btn-primary btn-sm">Train</a>
+   66:                             </b><a href="https://isn-elearning-prototype/question/" class="btn-primary btn-sm">Train</a>
+   69:                             </b><a href="https://isn-elearning-prototype/question/" class="btn-primary btn-sm">Train</a>
+   72:                             </b><a href="https://isn-elearning-prototype/question/" class="btn-primary btn-sm">Train</a>
+   75:                             </b><a href="https://isn-elearning-prototype/question/" class="btn-primary btn-sm">Train</a>
+   93:                             </b><a href="https://isn-elearning-prototype/question/" class="btn-primary btn-sm">Train</a>
+   96:                             </b><a href="https://isn-elearning-prototype/question/" class="btn-primary btn-sm">Train</a>
+  115:                             </b><a href="https://isn-elearning-prototype/question/" class="btn-primary btn-sm">Train</a>
+
+templates/includes/sidebar-inner.html:
+  25:                     <a class="nav-link" href="https://isn-elearning-prototype/">
+  31:                     <a class="nav-link" href="https://isn-elearning-prototype/training/">
+  37:                     <a class="nav-link" href="https://isn-elearning-prototype/training/">

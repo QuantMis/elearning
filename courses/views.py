@@ -15,5 +15,17 @@ def training(request):
 def question(request):
     return render(request, 'question.html', {})
 
+def discussion(request):
+    return render(request, 'discussion.html', {})
+
 def result(request):
     return render(request, 'result.html', {})
+
+def selection(request):
+    return render(request, 'selection.html', {})
+
+def exam_selection(request):
+    return render(request, 'exam_selection.html', {})
+
+def exam_question(request):
+    return render(request, 'exam_question.html', {})

@@ -1,0 +1,156 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<style>
+    .card {
+        padding: 10px 10px 10px 5px;
+    }
+
+    .list-item {
+        font-size: 12px;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .jumbotron {
+        padding: 5px 5px 5px 5px;
+    }
+
+    .form {
+        width: 100%;
+    }
+
+    .card {
+        margin: auto;
+        margin-bottom: 20px;
+        padding: 10px 10px 0px 10px;
+    }
+</style>
+
+<!-- Header -->
+<div class="header pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-12">
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item"><a style="color: black;" href="#">Training</a></li>
+                            <li class="breadcrumb-item"><a style="color: black;" href="#">
+                                <i class="fas fa-book-open"></i>
+                            </a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Page content -->
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col-xl-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Course Summary</h5>
+                    <p class="card-text">JavaScript is the globally used client-side scripting languages for the web. Most browsers support the language by default, so you can get started using JavaScript and HTML with a simple text editor and browser for testing</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-8">
+            <h3>Course Levels</h3>
+            <ul>
+                <li>
+                    <div class="card">
+                        <h5>
+                            Level 1: Data Structure & Variables
+                            <a href=".0.0.1:8000/question/" type="button"
+                                class="btn btn-primary btn-sm" style="float: right;">Questions
+                            </a>
+
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <h5>
+                            Level 2: functions & Method
+                            <a href=".0.0.1:8000/question/" type="button"
+                                class="btn btn-primary btn-sm" style="float: right;">Questions
+                            </a>
+
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <h5>
+                            Level 3: Ajax and Jquery Implementation
+                            <a href=".0.0.1:8000/question/" type="button"
+                                class="btn btn-primary btn-sm" style="float: right;">Questions
+                            </a>
+
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <h5>
+                            Level 4: Object Oriented Programming
+                            <a href=".0.0.1:8000/question/" type="button"
+                                class="btn btn-primary btn-sm" style="float: right;">Questions
+                            </a>
+
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <h5>
+                            Level 5: Using Redis & Kafka
+                            <a href=".0.0.1:8000/question/" type="button"
+                                class="btn btn-primary btn-sm" style="float: right;">Questions
+                            </a>
+
+                        </h5>
+                    </div>
+                </li>
+                <li>
+                    <div class="card">
+                        <h5>
+                            Level 6: Binary Search & Other Algorithms
+                            <a href=".0.0.1:8000/question/" type="button"
+                                class="btn btn-primary btn-sm" style="float: right;">Questions
+                            </a>
+
+                        </h5>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    {% include 'includes/footer.html' %}
+
+</div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+<script src="/static/assets/vendor/chart.js/dist/Chart.min.js"></script>
+<script src="/static/assets/vendor/chart.js/dist/Chart.extension.js"></script>
+<script>
+</script>
+{% endblock javascripts %}

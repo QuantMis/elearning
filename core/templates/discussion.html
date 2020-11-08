@@ -1,0 +1,310 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<style>
+    .list-group-item {
+        font-size: 10px;
+    }
+
+    .feed {
+        float: right;
+        font-size: 12px;
+    }
+
+    #stat {
+        width: 100%;
+        height: 100%;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+
+    .be-comment-block {
+        margin-bottom: 50px !important;
+        border: 1px solid #edeff2;
+        border-radius: 2px;
+        padding: 50px 70px;
+        border: 1px solid #ffffff;
+    }
+
+    .comments-title {
+        font-size: 16px;
+        color: #262626;
+        margin-bottom: 15px;
+        font-family: 'Conv_helveticaneuecyr-bold';
+    }
+
+    .be-img-comment {
+        width: 60px;
+        height: 60px;
+        float: left;
+        margin-bottom: 15px;
+    }
+
+    .be-ava-comment {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .be-comment-content {
+        margin-left: 80px;
+    }
+
+    .be-comment-content span {
+        display: inline-block;
+        width: 49%;
+        margin-bottom: 15px;
+    }
+
+    .be-comment-name {
+        font-size: 13px;
+        font-family: 'Conv_helveticaneuecyr-bold';
+    }
+
+    .be-comment-content a {
+        color: #383b43;
+    }
+
+    .be-comment-content span {
+        display: inline-block;
+        width: 49%;
+        margin-bottom: 15px;
+    }
+
+    .be-comment-time {
+        text-align: right;
+    }
+
+    .be-comment-time {
+        font-size: 11px;
+        color: #b4b7c1;
+    }
+
+    .be-comment-text {
+        font-size: 13px;
+        line-height: 18px;
+        color: #7a8192;
+        display: block;
+        background: #f6f6f7;
+        border: 1px solid #edeff2;
+        padding: 15px 20px 20px 20px;
+    }
+
+    .form-group.fl_icon .icon {
+        position: absolute;
+        top: 1px;
+        left: 16px;
+        width: 48px;
+        height: 48px;
+        background: #f6f6f7;
+        color: #b5b8c2;
+        text-align: center;
+        line-height: 50px;
+        -webkit-border-top-left-radius: 2px;
+        -webkit-border-bottom-left-radius: 2px;
+        -moz-border-radius-topleft: 2px;
+        -moz-border-radius-bottomleft: 2px;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+
+    .form-group .form-input {
+        font-size: 13px;
+        line-height: 50px;
+        font-weight: 400;
+        color: #b4b7c1;
+        width: 100%;
+        height: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: 1px solid #edeff2;
+        border-radius: 3px;
+    }
+
+    .form-group.fl_icon .form-input {
+        padding-left: 70px;
+    }
+
+    .form-group textarea.form-input {
+        height: 150px;
+    }
+</style>
+
+<!-- Header -->
+<div class="header pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item"><a style="color: black;" href="#">Discussion</a></li>
+                            <li class="breadcrumb-item"><a style="color: black;" href="#"> <i
+                                        class="fas fa-users"></i>
+
+                                </a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <!-- Card stats -->
+        </div>
+    </div>
+</div>
+
+<!-- Page content -->
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col-xl-8">
+            <div class="card">
+                <div class="card-body">
+                    <div class="be-comment-block">
+                        <div class="comment-question">
+                            <h1>How to center a div</h1>
+                            <h3>Does anyone here knows how to centered a div tag inside another div tag?</h3>
+                            <h5 class="text-muted">Asked <b>15 Jan 2020</b></h5>
+                        </div>
+                        <div class="container"
+                            style="border-top: solid 0.1px; padding-top: 10px; border-color: gainsboro">
+                            <div class="be-comment">
+                                <div class="be-img-comment">
+                                    <div class="icon"><i class="fa fa-user"></i></div>
+
+                                </div>
+                                <div class="be-comment-content">
+
+                                    <span class="be-comment-name">
+                                        <a href="blog-detail-2.html">Pravin</a>
+                                    </span>
+                                    <span class="be-comment-time">
+                                        <i class="fa fa-clock-o"></i>
+                                        May 27, 2020 at 3:14am
+                                    </span>
+
+                                    <p class="be-comment-text">
+                                        Pellentesque gravida tristique ultrices.
+                                        Sed blandit varius mauris, vel volutpat urna hendrerit id.
+                                        Curabitur rutrum dolor gravida turpis tristique efficitur.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="be-comment">
+                                <div class="be-img-comment">
+                                    <div class="icon"><i class="fa fa-user"></i></div>
+                                </div>
+                                <div class="be-comment-content">
+                                    <span class="be-comment-name">
+                                        <a href="blog-detail-2.html">Abdul Majid</a>
+                                    </span>
+                                    <span class="be-comment-time">
+                                        <i class="fa fa-clock-o"></i>
+                                        May 27, 2020 at 3:14am
+                                    </span>
+                                    <p class="be-comment-text">
+                                        Nunc ornare sed dolor sed mattis. In scelerisque dui a arcu mattis, at maximus
+                                        eros
+                                        commodo. Cras magna nunc, cursus lobortis luctus at, sollicitudin vel neque.
+                                        Duis
+                                        eleifend lorem non ant. Proin ut ornare lectus, vel eleifend est. Fusce
+                                        hendrerit
+                                        dui in
+                                        turpis tristique blandit.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="be-comment">
+                                <div class="be-img-comment">
+                                    <div class="icon"><i class="fa fa-user"></i></div>
+                                </div>
+                                <div class="be-comment-content">
+                                    <span class="be-comment-name">
+                                        <a href="blog-detail-2.html">Tan Bon</a>
+                                    </span>
+                                    <span class="be-comment-time">
+                                        <i class="fa fa-clock-o"></i>
+                                        May 27, 2020 at 1:14am
+                                    </span>
+                                    <p class="be-comment-text">
+                                        Cras magna nunc, cursus lobortis luctus at, sollicitudin vel neque. Duis
+                                        eleifend
+                                        lorem
+                                        non ant
+                                    </p>
+                                </div>
+                            </div>
+                            <form class="form-block">
+                                <div class="">
+                                    <div class="form-group">
+                                        <textarea style="width: 100%" class="form-input" required=""
+                                            placeholder="Your text"></textarea>
+                                    </div>
+                                    <a style="color: white;" class="btn btn-primary pull-right">Reply</a>
+                                </div>
+                                <!-- </div> -->
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-xl-4">
+            <div class="card">
+                <div style="background-color: white;" class="card-header bg-transparent">
+                  <div class="row align-items-center">
+                    <div class="col">
+                      <!-- <h6 class="text-light text-uppercase ls-1 mb-1">My Courses</h6> -->
+                      <h5 class="h3 text-black mb-0">Community</h5>
+                    </div>
+                  </div>
+                </div>
+                <div style="background-color:white" class="card-body">
+                  <!-- Course -->
+                  <div class="course">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Hairi Azman<p class="feed">
+                        <span style="font-size: 10px;" class="badge badge-pill badge-success">Online</span>
+                      </p>
+                      </li>
+                      <li class="list-group-item">Abdul Majid<p class="feed">
+                        <span style="font-size: 10px;" class="badge badge-pill badge-primary">Away</span>
+                      </p>
+                      </li>
+                      <li class="list-group-item">Tan Boon<p class="feed">
+                        <span style="font-size: 10px;" class="badge badge-pill badge-primary">Away</span>
+                      </p>
+                      </li>
+                      <li class="list-group-item">Achmed Aziz<p class="feed">
+                        <span style="font-size: 10px;" class="badge badge-pill badge-danger">Inactive</span>
+                      </p>
+                      </li>
+                    </li>
+                    <li class="list-group-item">Robertson Daud<p class="feed">
+                      <span style="font-size: 10px;" class="badge badge-pill badge-success">Online</span>
+                    </p>
+                    </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+        
+        </div>
+    </div>
+    {% include 'includes/footer.html' %}
+
+</div>
+{% endblock content %}
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+{% endblock javascripts %}

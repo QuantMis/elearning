@@ -1,0 +1,140 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Dashboard {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<style>
+    .reminder>h5 {
+        color: skyblue;
+    }
+
+    .feed {
+        float: right;
+        font-size: 12px;
+    }
+
+    #stat {
+        width: 100%;
+        height: 100%;
+    }
+
+    .fright {
+        float: right;
+    }
+</style>
+
+<!-- Header -->
+<div class="header pb-6">
+    <div class="container-fluid">
+        <div class="header-body">
+            <div class="row align-items-center py-4">
+                <div class="col-lg-6 col-7">
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item"><a style="color: black;" href="#">Exams</a></li>
+                            <li class="breadcrumb-item"><a style="color: black;" href="#"> <i
+                                        class="fas fa-journal-whills"></i>
+
+                                </a></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Page content -->
+<div class="container-fluid mt--6">
+    <div class="row">
+        <div class="col-xl-8">
+            <div class="alert alert-success text-center">
+                <strong>Warning!</strong> This is an examination's page. Be carefull with your actions.
+            </div>
+            <div class="card-deck">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Javascript Programming</h5>
+                        <p class="card-text">JavaScript, often abbreviated as JS, is a programming language that
+                            conforms to the ECMAScript specification</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href=".0.0.1:8000/question/exam/" type="button"
+                            class="btn btn-info btn-md btn-block">Take Exam</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Machine Learning</h5>
+                        <p class="card-text">
+                            Machine learning is the study of computer algorithms that improve automatically through
+                            experience. It is seen as a subset of artificial intelligence
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <a href=".0.0.1:8000/question/exam/" type="button"
+                            class="btn btn-info btn-md btn-block">Take Exam</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Web Technology</h5>
+                        <p class="card-text">
+                            Web technology refers to the means by which computers communicate with each other using
+                            markup languages and multimedia packages.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-md btn-block text-muted" disabled>Available at 2 December</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <div class="card">
+                <div style="background-color: white;" class="card-header bg-transparent">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <!-- <h6 class="text-light text-uppercase ls-1 mb-1">My Courses</h6> -->
+                            <h5 class="h3 text-black mb-0">Reminders</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body reminder">
+                    <h5>Examinations will expired at 10 Dec 2020</h5>
+                    <h5>Grading will start at 15 Dec 2020</h5>
+                </div>
+            </div>
+            <div class="card">
+                <div style="background-color: white;" class="card-header bg-transparent">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <!-- <h6 class="text-light text-uppercase ls-1 mb-1">My Courses</h6> -->
+                            <h5 class="h3 text-black mb-0">Upcoming</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="text-muted">Web Technology at 2 December 2020</h5>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    {% include 'includes/footer.html' %}
+
+    {% endblock content %}
+
+    <!-- Specific Page JS goes HERE  -->
+    {% block javascripts %}
+
+    <script src="/static/assets/vendor/chart.js/dist/Chart.min.js"></script>
+    <script src="/static/assets/vendor/chart.js/dist/Chart.extension.js"></script>
+    <script>
+    </script>
+    {% endblock javascripts %}

@@ -24,70 +24,79 @@
     }
 </style>
 <div class="header pb-6">
-    <div style="height: 100%;" class="container-fluid">
+    <div class="container-fluid">
         <div class="header-body">
             <div class="row align-items-center py-4">
-                <div class="col-lg-6 col-7">
+                <div class="col-lg-12">
                     <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                         <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                            <li class="breadcrumb-item"><a style="color: black;" href="#">Rewards</a></li>
-                            <li class="breadcrumb-item"><a href="#"><i style="color: black;"
-                                        class="ni ni-ungroup"></i></a></li>
+                            <li class="breadcrumb-item"><a style="color: black;" href="#">Congratulations! You have mode
+                                    some progress</a></li>
                         </ol>
                     </nav>
                 </div>
             </div>
-            <!-- Card stats -->
         </div>
     </div>
 </div>
-
-<!-- Page content -->
 <div class="container-fluid mt--6">
-    <div class="row">
-        <!--  -->
-        <div class="col-xl-12">
-            <div class="card">
-                <div style="background-color: white;" class="card-header bg-transparent">
-                    <div class="row align-items-center">
-                        <div class="col">
-                            <!-- <h6 class="text-light text-uppercase ls-1 mb-1">My Courses</h6> -->
-                            <h3 style="font-size: 20px;" class="h3 text-black mb-0">You gain 2 honor points!</h3>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Earn extra honor and climb the leaderboards!</h5>
-                            <p class="card-text">
-                                Honor is earned for each progress made..
-                            </p>
-                            <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
-                            <div class="fb-share-button" data-href="0.0.1:8000/" data-layout="button_count">
-                            </div>
-                        </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-xl-2 text-center">
+                    <i class="fa fa-user" style="color: gainsboro; background-color: ghostwhite;
+                    font-size: 5.75em;"></i>
+                </div>
+                <div style="border-right: solid 0.1px;" class="col-xl-6">
+                    <h3>Ali Imran</h3>
+                    <h3>
+                        <b>Level 12 </b>Ultra Learner
+                    </h3>
+                    <div class="progress" style="height: 20px; background-color: white">
+                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25"
+                            aria-valuemin="0" aria-valuemax="100">25/100 XP</div>
                     </div>
                 </div>
-                <div style="background-color:white" class="card-body">
-                    <!-- Course -->
-
+                <div class="col-xl-4">
+                    <h3><b>Rewards unlocked next level</b></h3>
+                    <h3><b style="color: gold">+4</b> skills for your profile</h3>
+                    <h3><b style="color: gold">+30pts</b> for your honor points</h3>
                 </div>
             </div>
-            {% include 'includes/footer.html' %}
-            <!--  -->
-
         </div>
+        <div class="card-body text-center">
+            <h3>As you completed objectives and use the site you will earn experience points (XP) to increase your
+                reward level. Increasing
+                your level unlocks special reward, badges and item. To more you level, the more you rewarded!
+            </h3>
+        </div>
+        <div class="container text-center" style="padding-bottom: 20px;">
+            <p>Your score: </p>
+            <h3>98 out of 100</h3>
+            <p>Badges Earned</p>
+            <i class="fas fa-khanda" style="color: black; height:1rem;
+              font-size: 3.75em;"></i>
+            <i class="fas fa-gem" style="color: silver; height:1rem;
+            font-size: 3.75em;"></i>  
+            <p style="padding-top: 10px;">
+                <a class="fb-share-button text-center" data-href=".0.0.1:8000/" data-layout="button_count">
+                </a>
+    
+            </p>          
+        </div>
+    </div>
+    {% include 'includes/footer.html' %}
 
-        {% endblock content %}
+</div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+    
+{% endblock content %}
 
-        <!-- Specific Page JS goes HERE  -->
-        {% block javascripts %}
-
-        <script src="/static/assets/vendor/chart.js/dist/Chart.min.js"></script>
-        <script src="/static/assets/vendor/chart.js/dist/Chart.extension.js"></script>
-        <script>(function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
-
-        {% endblock javascripts %}
+<!-- Page content -->

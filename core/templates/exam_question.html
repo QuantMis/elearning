@@ -21,6 +21,7 @@
         width: 100%;
         height: 100%;
     }
+
     .fright {
         float: right;
     }
@@ -34,10 +35,9 @@
                 <div class="col-lg-6 col-7">
                     <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                         <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                            <li class="breadcrumb-item"><a style="color: black;" href="#">Training</a></li>
-                            <li class="breadcrumb-item"><a style="color: black;" href="#">
-                                <i class="fas fa-book-open"></i>
-                            </a></li>
+                            <li class="breadcrumb-item"><a style="color: black;" href="#">Exams</a></li>
+                            <li class="breadcrumb-item"><a style="color: black;" href="#"><i
+                                        class="fas fa-home"></i></a></li>
                         </ol>
                     </nav>
                 </div>
@@ -53,81 +53,97 @@
             <div class="card">
                 <div style="background-color: white;" class="card-header bg-transparent">
                     <div class="row align-items-center">
-                        <div id="c2" class="col">
+                        <div id="c1" class="col">
                             <!-- <h6 class="text-light text-uppercase ls-1 mb-1">My Courses</h6> -->
-                            <h5 class="h3 text-black mb-0">Javascript Programming<p class="fright mb-0">
-                                <a class="btn-sm btn-primary" style="font-size: 15px;" href=".0.0.1:8000/selection/"><b>Continue</b></a>                            
-                            </p>
-                            </h5>                        
+                            <h5 class="h3 text-black mb-0">Question 1</h5>
                         </div>
                     </div>
                 </div>
                 <div style="background-color:white" class="card-body">
                     <!-- Course -->
-                    <div class="course">
+                    <div id="c1">
                         <p>
-                            JavaScript, often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. 
-                            JavaScript is high-level, often just-in-time compiled, and multi-paradigm.
+                            A callback is a plain JavaScript function passed to some method as an argument or option. 
+                            Some callbacks are just events, called to give the user a chance to react when a certain state is triggered.
+                            Define callback.
                         </p>
+                        <textarea style="width: 100%; background-color: white; opacity: 0.5;" id="" cols="0"
+                            rows="6">  your solution ..</textarea>
                     </div>
                 </div>
                 <div style="background-color: white;" class="card-header bg-transparent">
                     <div class="row align-items-center">
-                        <div id="c2" class="col">
+                        <div id="c1" class="col">
                             <!-- <h6 class="text-light text-uppercase ls-1 mb-1">My Courses</h6> -->
-                            <h5 class="h3 text-black mb-0">Machine Learning<p class="fright mb-0">
-                                <a class="btn-sm btn-primary" style="font-size: 15px;" href=".0.0.1:8000/selection/"><b>Continue</b></a>                            
-                            </p>
-                            </h5>                        
+                            <h5 class="h3 text-black mb-0">Question 2</h5>
                         </div>
                     </div>
                 </div>
-                <div style="background-color:white" class="card-body">
-                    <!-- Course -->
-                    <div class="course">
-                        <p>
 
-                            Machine learning is the study of computer algorithms that improve automatically through experience. 
-                            It is seen as a subset of artificial intelligence.
-                        </p>                    
+                <div style="background-color:white" class="card-body">
+                    <!-- Course -->
+                    <div id="c2">
+                        <p>
+                            Which built-in method adds one or more elements to the end of an array and returns the new length of the array?
+                        </p>
+                        <textarea style="width: 100%; background-color: white; opacity: 0.5;" id="" cols="0"
+                            rows="6">  your solution ..</textarea>
                     </div>
                 </div>
                 <div style="background-color: white;" class="card-header bg-transparent">
                     <div class="row align-items-center">
-                        <div id="c2" class="col">
+                        <div id="c1" class="col">
                             <!-- <h6 class="text-light text-uppercase ls-1 mb-1">My Courses</h6> -->
-                            <h5 class="h3 text-black mb-0">Web Technology<p class="fright mb-0">
-                                <a class="btn-sm btn-primary" style="font-size: 15px;" href=".0.0.1:8000/selection/"><b>Continue</b></a>                            
-                            </p>
-                            </h5>                        
+                            <h5 class="h3 text-black mb-0">Question 3</h5>
                         </div>
                     </div>
                 </div>
+
                 <div style="background-color:white" class="card-body">
                     <!-- Course -->
-                    <div class="course">
+                    <div id="c3">
                         <p>
-                            Web technology refers to the means by which computers communicate with each other using markup languages and multimedia packages. 
-                            It gives us a way to interact with hosted information, like websites. 
+                            Which built-in method returns the characters in a string beginning at the specified location?
                         </p>
+                        <textarea style="width: 100%; background-color: white; opacity: 0.5;" id="" cols="0"
+                            rows="6">  your solution ..</textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div id="result-of-question" class="pulse animated" style="display: block;">
+                            <span id="totalCorrect" class="pull-right"></span>
+                            <table class="table table-hover table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th><a href=".0.0.1:8000/result/" class="btn-primary btn-sm">Submit</a></th>
+                                        <th><a href=".0.0.1:8000/selection/exam/" class="btn-primary btn-sm">Save for later</a></th>
+                                    </tr>
+                                </thead>
+                                <!-- <tbody id="quizResult"></tbody> -->
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
         <div class="col-xl-4">
             <div class="card">
                 <div class="card-header bg-transparent">
                     <div class="row align-items-center">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">
-                                <a href="#c1">Javascript Programming</a>
+                                <a href="#c1">Question 1</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="#c2">Machine Learning</a>
+                                <a href="#c2">Question 2</a>
                             </li>
                             <li class="list-group-item">
-                                <a href="#c3">Web Technology</a>
+                                <a href="#c3">Question 3</a>
                             </li>
+
+
                         </ul>
                     </div>
                 </div>
@@ -142,9 +158,4 @@
 
 <!-- Specific Page JS goes HERE  -->
 {% block javascripts %}
-
-<script src="/static/assets/vendor/chart.js/dist/Chart.min.js"></script>
-<script src="/static/assets/vendor/chart.js/dist/Chart.extension.js"></script>
-<script>
-</script>
 {% endblock javascripts %}

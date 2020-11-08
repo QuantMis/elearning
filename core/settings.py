@@ -135,7 +135,7 @@ STATICFILES_DIRS = (
 #############################################################
 
 ## GEOS Setting
-#geo_enabled = config('DEBUG', default=0)
-#if geo_enabled == 1:
-#    GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')
-#    GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')
+geo_enabled = config('DEBUG', default=1)
+if geo_enabled == 1:
+    GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')
+    GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')

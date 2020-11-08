@@ -4,6 +4,10 @@ from courses.views import (
     training,
     question,
     result,
+    discussion,
+    selection,
+    exam_selection,
+    exam_question,
 )
 
 urlpatterns = [
@@ -11,4 +15,8 @@ urlpatterns = [
     path('training/',training),
     path('question/',question),
     path('result/',result),
+    path('discussion/',discussion),
+    path('selection/',selection),
+    path('selection/exam/',exam_selection),
+    path('question/exam/',exam_question),
 ]

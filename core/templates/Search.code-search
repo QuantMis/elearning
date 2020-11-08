@@ -1,0 +1,100 @@
+# Query: .0.0.1:8000
+# Flags: IgnoreExcludeSettings
+# ContextLines: 1
+
+23 results - 9 files
+
+README.md:
+  54  $
+  55: $ # Access the web app in browser: http://127/
+  56  ```
+
+core/templates/exam_question.html:
+  118                                      <tr>
+  119:                                         <th><a href="/result/" class="btn-primary btn-sm">Submit</a></th>
+  120:                                         <th><a href="/selection/exam/" class="btn-primary btn-sm">Save for later</a></th>
+  121                                      </tr>
+
+core/templates/exam_selection.html:
+  65                      <div class="card-footer">
+  66:                         <a href="/question/exam/" type="button"
+  67                              class="btn btn-info btn-md btn-block">Take Exam</a>
+
+  78                      <div class="card-footer">
+  79:                         <a href="/question/exam/" type="button"
+  80                              class="btn btn-info btn-md btn-block">Take Exam</a>
+
+core/templates/index.html:
+  147            </p>
+  148:           <a href="/training/" type="button" class="btn btn-primary btn-md btn-block">Training</a>
+  149          </div>
+
+core/templates/question.html:
+  72                              rows="6">  your solution ..</textarea>
+  73:                         <a href="/selection/" class="btn-primary btn-sm">Submit</a>
+  74:                         <a href="/selection/" class="btn-primary btn-sm">Save for later</a>
+  75  
+
+  83                      <h3>Looking for help? Dont hesitate to discuss with the community</h3>
+  84:                     <a href="/discussion/" type="button" class="btn btn-primary btn-sm btn-block">Discussion</a>     
+  85                  </div>
+
+core/templates/result.html:
+  81              <p style="padding-top: 10px;">
+  82:                 <a class="fb-share-button text-center" data-href="/" data-layout="button_count">
+  83                  </a>
+
+core/templates/selection.html:
+   76                              Level 1: Data Structure & Variables
+   77:                             <a href="/question/" type="button"
+   78                                  class="btn btn-primary btn-sm" style="float: right;">Questions
+
+   87                              Level 2: functions & Method
+   88:                             <a href="/question/" type="button"
+   89                                  class="btn btn-primary btn-sm" style="float: right;">Questions
+
+   98                              Level 3: Ajax and Jquery Implementation
+   99:                             <a href="/question/" type="button"
+  100                                  class="btn btn-primary btn-sm" style="float: right;">Questions
+
+  109                              Level 4: Object Oriented Programming
+  110:                             <a href="/question/" type="button"
+  111                                  class="btn btn-primary btn-sm" style="float: right;">Questions
+
+  120                              Level 5: Using Redis & Kafka
+  121:                             <a href="/question/" type="button"
+  122                                  class="btn btn-primary btn-sm" style="float: right;">Questions
+
+  131                              Level 6: Binary Search & Other Algorithms
+  132:                             <a href="/question/" type="button"
+  133                                  class="btn btn-primary btn-sm" style="float: right;">Questions
+
+core/templates/training.html:
+   58                              <h5 class="h3 text-black mb-0">Javascript Programming<p class="fright mb-0">
+   59:                                 <a class="btn-sm btn-primary" style="font-size: 15px;" href="/selection/"><b>Continue</b></a>                            
+   60                              </p>
+
+   78                              <h5 class="h3 text-black mb-0">Machine Learning<p class="fright mb-0">
+   79:                                 <a class="btn-sm btn-primary" style="font-size: 15px;" href="/selection/"><b>Continue</b></a>                            
+   80                              </p>
+
+   99                              <h5 class="h3 text-black mb-0">Web Technology<p class="fright mb-0">
+  100:                                 <a class="btn-sm btn-primary" style="font-size: 15px;" href="/selection/"><b>Continue</b></a>                            
+  101                              </p>
+
+core/templates/includes/sidebar-inner.html:
+  26                  <li class="nav-item">
+  27:                     <a class="nav-link" href="/">
+  28                          <i class="fas fa-home text-red"></i>
+
+  32                  <li class="nav-item">
+  33:                     <a class="nav-link" href="/training/">
+  34                          <i class="fas fa-book-open text-blue"></i>
+
+  38                  <li class="nav-item">
+  39:                     <a class="nav-link" href="/selection/exam">
+  40                          <i class="fas fa-journal-whills text-purple"></i>
+
+  44                  <li>
+  45:                     <a class="nav-link" href="/discussion/">
+  46                          <i class="fas fa-users text-info" ></i>
